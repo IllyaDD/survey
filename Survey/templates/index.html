@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data_dish.question }}</title>
+</head>
+<body>
+<h1>{{ data_dish.question }}<h1>
+<form action="/poll">
+    {% for i in data_dish.fields %}
+        <input type="radio" name="field" value="{{ i }}"> {{ i }}<br>
+    {% endfor %}
+<input type = "submit" value = "Vote"/>
+</form>
+</body>
+</html>

@@ -8,10 +8,17 @@ poll_data = {
     'question': 'What is yor favorite programming lnaguage?',
     'fields': ['Python', 'Ruby', 'Java', 'Other'],}
 
+dish_data = {
+    'question': 'What is your favorite dish? ',
+    'fields': ['Pizza', 'Pasta', 'Lasagna', 'Wine with parmesan cheese']}
+
 @app.route('/')
 def root():
     return render_template('poll.html', data=poll_data)
 
+@app.route('/dish')
+def dish():
+    return render_template("index.html", data_dish=dish_data)
 
 @app.route('/poll')
 def poll():
